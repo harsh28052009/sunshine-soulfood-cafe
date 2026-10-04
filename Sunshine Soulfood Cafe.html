@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sunshine Soulfood Cafe · Orlando</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8ec;--bg2:#ffefd2;--card:#ffffff;--tx:#2a1a0e;--mu:#7a6350;--ac:#e8890c;--ac2:#c2410c;--gold:#b8860b;--bd:rgba(42,26,14,.12);--glow:rgba(232,137,12,.25)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0a07;--bg2:#17100a;--card:#1d1510;--tx:#f7ecdc;--mu:#b9a58e;--ac:#ffb23e;--ac2:#ff7a1a;--gold:#e6c36a;--bd:rgba(255,236,210,.12);--glow:rgba(255,178,62,.22)}}
+:root[data-theme="dark"]{--bg:#0e0a07;--bg2:#17100a;--card:#1d1510;--tx:#f7ecdc;--mu:#b9a58e;--ac:#ffb23e;--ac2:#ff7a1a;--gold:#e6c36a;--bd:rgba(255,236,210,.12);--glow:rgba(255,178,62,.22)}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+body{background:var(--bg);color:var(--tx);font-family:'Outfit',system-ui,sans-serif;line-height:1.6;padding-bottom:84px;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.eyebrow{letter-spacing:.25em;text-transform:uppercase;font-size:.72rem;color:var(--gold);font-weight:600}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:8px 0 14px}
+.sub{color:var(--mu);max-width:560px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--bd)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.15rem}
+.logo span{color:var(--ac)}
+.links{display:none;gap:22px;font-size:.9rem;color:var(--mu)}
+.links a:hover{color:var(--ac)}
+@media(min-width:800px){.links{display:flex}}
+.tg{border:1px solid var(--bd);background:var(--card);color:var(--tx);width:40px;height:40px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:99px;font-weight:600;border:1px solid transparent;cursor:pointer;font-size:1rem;font-family:inherit;transition:.25s}
+.b1{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#1a0e03;box-shadow:0 10px 30px var(--glow)}
+.b1:hover{transform:translateY(-2px)}
+.b2{border-color:var(--bd);background:var(--card)}
+.b2:hover{border-color:var(--ac)}
+.hero{position:relative;padding:70px 0 60px;overflow:hidden;background:radial-gradient(700px 400px at 85% 0%,var(--glow),transparent 70%),radial-gradient(600px 400px at 0% 100%,var(--glow),transparent 70%)}
+.hero h1{font-size:clamp(2.8rem,11vw,6rem);font-weight:800;margin:14px 0 18px}
+.hero h1 em{color:var(--ac);font-style:italic}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 28px}
+.pill{padding:6px 14px;border-radius:99px;border:1px solid var(--bd);background:var(--card);font-size:.82rem;color:var(--mu)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.heroimgs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:44px}
+.heroimgs .ph:nth-child(2){transform:translateY(22px)}
+.ph{aspect-ratio:3/4;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:clamp(2.4rem,9vw,4.5rem);position:relative;overflow:hidden;border:1px solid var(--bd);box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.ph small{position:absolute;bottom:10px;left:12px;font-size:.72rem;font-weight:600;letter-spacing:.06em;background:rgba(0,0,0,.45);color:#fff;padding:3px 10px;border-radius:99px;backdrop-filter:blur(6px)}
+.g1{background:linear-gradient(145deg,#f59e0b,#b45309)}.g2{background:linear-gradient(145deg,#7c2d12,#ea580c)}.g3{background:linear-gradient(145deg,#facc15,#d97706)}.g4{background:linear-gradient(145deg,#92400e,#451a03)}.g5{background:linear-gradient(145deg,#fb923c,#9a3412)}.g6{background:linear-gradient(145deg,#65a30d,#365314)}.g7{background:linear-gradient(145deg,#fde68a,#f59e0b)}.g8{background:linear-gradient(145deg,#be123c,#7c2d12)}
+.marq{overflow:hidden;border-block:1px solid var(--bd);background:var(--bg2);padding:14px 0;white-space:nowrap}
+.marq div{display:inline-block;animation:m 28s linear infinite;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold)}
+@keyframes m{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marq div{animation:none}}
+.about{display:grid;gap:34px}
+@media(min-width:800px){.about{grid-template-columns:1fr 1fr;align-items:center}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:16px;text-align:center}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--ac)}
+.stat span{font-size:.75rem;color:var(--mu)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:26px 0 20px;padding-bottom:6px}
+.tab{flex:none;padding:10px 20px;border-radius:99px;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font-family:inherit;font-weight:600}
+.tab.on{background:var(--ac);color:#1a0e03;border-color:var(--ac)}
+.menu{display:grid;gap:14px}
+@media(min-width:700px){.menu{grid-template-columns:1fr 1fr}}
+.item{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:12px;transition:.25s}
+.item:hover{border-color:var(--ac);transform:translateY(-2px)}
+.item .th{width:76px;height:76px;border-radius:16px;display:grid;place-items:center;font-size:2rem;flex:none}
+.item h3{font-size:1.1rem;font-family:'Outfit',sans-serif;font-weight:600}
+.item p{font-size:.85rem;color:var(--mu);line-height:1.4}
+.tag{font-size:.65rem;background:var(--glow);color:var(--ac);padding:2px 9px;border-radius:99px;font-weight:700;margin-left:6px;vertical-align:middle}
+.add{margin-left:auto;flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--ac);background:transparent;color:var(--ac);font-size:1.4rem;cursor:pointer}
+.add:hover{background:var(--ac);color:#1a0e03}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px}
+@media(min-width:800px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal .ph{aspect-ratio:1;font-size:3.2rem;border-radius:22px;transition:.3s}
+.gal .ph:hover{transform:scale(1.03) rotate(-1deg)}
+.gal .tall{grid-row:span 2;aspect-ratio:auto}
+.note{font-size:.8rem;color:var(--mu);margin-top:14px}
+.revs{display:grid;gap:14px;margin-top:28px}
+@media(min-width:800px){.revs{grid-template-columns:repeat(3,1fr)}}
+.rev{background:var(--card);border:1px solid var(--bd);border-radius:24px;padding:22px}
+.stars{color:var(--ac);letter-spacing:3px}
+.rev p{margin:10px 0 14px;font-size:.95rem}
+.rev b{font-size:.85rem}
+.rev span{display:block;color:var(--mu);font-size:.75rem}
+.order{background:var(--bg2);border-block:1px solid var(--bd)}
+.ob{background:var(--card);border:1px solid var(--bd);border-radius:28px;padding:24px;margin-top:26px;box-shadow:0 20px 50px var(--glow)}
+.cart{min-height:48px;display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chip{background:var(--glow);color:var(--ac);padding:6px 6px 6px 14px;border-radius:99px;font-size:.85rem;font-weight:600;display:inline-flex;gap:8px;align-items:center}
+.chip button{border:0;background:var(--ac);color:#1a0e03;border-radius:50%;width:22px;height:22px;cursor:pointer;font-weight:700}
+.empty{color:var(--mu);font-size:.9rem}
+input{width:100%;padding:14px 18px;border-radius:99px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-size:1rem;font-family:inherit;margin-bottom:14px}
+.visit{display:grid;gap:14px;margin-top:28px}
+@media(min-width:800px){.visit{grid-template-columns:repeat(3,1fr)}}
+.vc{background:var(--card);border:1px solid var(--bd);border-radius:24px;padding:24px}
+.vc .ic{font-size:1.8rem}
+.vc h3{font-size:1.2rem;margin:8px 0 4px}
+.vc p{color:var(--mu);font-size:.92rem}
+footer{padding:40px 0;text-align:center;color:var(--mu);font-size:.85rem;border-top:1px solid var(--bd)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;justify-content:center;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(16px);border-top:1px solid var(--bd)}
+.bar .btn{flex:1;max-width:220px;justify-content:center;padding:13px 10px;font-size:.92rem}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);z-index:90;background:var(--card);color:var(--tx);border:1px solid var(--ac);padding:12px 20px;border-radius:99px;font-size:.9rem;box-shadow:0 14px 40px var(--glow);opacity:0;pointer-events:none;transition:.3s;max-width:92vw;text-align:center}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.rv{opacity:0;transform:translateY(24px);transition:.8s}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a href="#top" class="logo">Sunshine <span>Soulfood</span></a>
+<div class="links"><a href="#about">Story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#order">Order</a><a href="#visit">Visit</a></div>
+<button class="tg" id="tg" aria-label="Toggle light or dark theme">🌙</button>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="eyebrow">Soul food · Haitian · Jamaican · Orlando</div>
+<h1>Soul food that <em>glows.</em></h1>
+<p class="sub">Tender oxtails, crispy fried chicken, creamy mac &amp; cheese and Haitian classics — cooked fresh, seasoned to the bone, served with real warmth on W Colonial Dr.</p>
+<div class="pills"><span class="pill">⭐ 4.4 · 550 reviews</span><span class="pill">🍽 Dine-in</span><span class="pill">🥡 Takeaway</span><span class="pill">🛵 No-contact delivery</span></div>
+<div class="cta">
+<a class="btn b1" href="#order">🛒 Order online</a>
+<a class="btn b2" href="tel:+14078398999">📞 Call now</a>
+<a class="btn b2" href="sms:+14078398999">💬 Message us</a>
+</div>
+<div class="heroimgs">
+<div class="ph g2">🍖<small>Oxtails</small></div>
+<div class="ph g1">🍗<small>Fried chicken</small></div>
+<div class="ph g3">🧀<small>Mac &amp; cheese</small></div>
+</div>
+</div></header>
+
+<div class="marq"><div>✦ Oxtails ✦ Fried Chicken ✦ Mac &amp; Cheese ✦ Goat Stew ✦ Collard Greens ✦ Cornbread ✦ Rasta Pasta ✦ Chicken &amp; Waffles ✦ Plantains ✦ Oxtails ✦ Fried Chicken ✦ Mac &amp; Cheese ✦ Goat Stew ✦ Collard Greens ✦ Cornbread ✦ Rasta Pasta ✦ Chicken &amp; Waffles ✦ Plantains </div></div>
+
+<section id="about"><div class="wrap about rv">
+<div>
+<div class="eyebrow">Our story</div>
+<h2>Home cooking, turned all the way up.</h2>
+<p class="sub">Sunshine Soulfood Cafe brings Southern soul and Caribbean flavor to one table. Everything is made fresh, portions are generous, and guests say it's worth the wait. Come hungry, leave glowing.</p>
+<div class="stats"><div class="stat"><b>4.4★</b><span>Google rating</span></div><div class="stat"><b>550</b><span>Reviews</span></div><div class="stat"><b>$20–30</b><span>Per person</span></div></div>
+</div>
+<div class="gal" style="margin:0;grid-template-columns:1fr 1fr"><div class="ph g4">🍲<small>Goat stew</small></div><div class="ph g5">🥞<small>Waffles</small></div></div>
+</div></section>
+
+<section id="menu" style="background:var(--bg2)"><div class="wrap rv">
+<div class="eyebrow">The menu</div>
+<h2>Fan favorites.</h2>
+<p class="sub">Tap + to add a dish to your order. Call us for today's full menu and prices.</p>
+<div class="tabs" id="tabs"></div>
+<div class="menu" id="menu-list"></div>
+</div></section>
+
+<section id="gallery"><div class="wrap rv">
+<div class="eyebrow">Gallery</div>
+<h2>Eat with your eyes first.</h2>
+<div class="gal">
+<div class="ph g2 tall">🍖<small>Fall-off-the-bone oxtails</small></div>
+<div class="ph g1">🍗<small>Fried chicken</small></div>
+<div class="ph g7">🌽<small>Cornbread</small></div>
+<div class="ph g6">🥬<small>Collard greens</small></div>
+<div class="ph g3">🧀<small>Mac &amp; cheese</small></div>
+<div class="ph g8 tall">🍲<small>Kabrit goat stew</small></div>
+<div class="ph g5">🥞<small>Chicken &amp; waffles</small></div>
+<div class="ph g4">🍝<small>Rasta pasta</small></div>
+<div class="ph g1">🍌<small>Plantains</small></div>
+<div class="ph g7">🍠<small>Sweet potato</small></div>
+</div>
+<p class="note">Photo tiles are styled placeholders — swap in your own food photos for the real thing.</p>
+</div></section>
+
+<section id="reviews" style="background:var(--bg2)"><div class="wrap rv">
+<div class="eyebrow">Reviews</div>
+<h2>Loved by Orlando.</h2>
+<div class="revs">
+<div class="rev"><div class="stars">★★★★★</div><p>“Food is cooked fresh, very tasty, and well worth the wait. Fried chicken is some of the best I've had. Wings with the Carolina gold sauce, worth every bite.”</p><b>Jerri Patterson</b><span>Local Guide · a month ago</span></div>
+<div class="rev"><div class="stars">★★★★★</div><p>“The oxtails were very good. Seasoned to the bone and so tender they were falling off the bone. The gravy was delicious.”</p><b>Michelle Maloy</b><span>Local Guide · 4 months ago</span></div>
+<div class="rev"><div class="stars">★★★★★</div><p>“Good and fresh. It tasted better than many restaurants in Miami. The workers were friendly and respectful.”</p><b>The Anointed One</b><span>Local Guide · 3 months ago</span></div>
+</div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap rv">
+<div class="eyebrow">Order online</div>
+<h2>Build your order.</h2>
+<p class="sub">Pick dishes from the menu above, add your name, then send by text or call us to confirm. Pickup, dine-in or delivery.</p>
+<div class="ob">
+<b>Your order</b>
+<div class="cart" id="cart"></div>
+<input id="nm" placeholder="Your name" autocomplete="name">
+<div class="cta">
+<a class="btn b1" id="send" href="sms:+14078398999">💬 Send order by text</a>
+<a class="btn b2" href="tel:+14078398999">📞 Call to order</a>
+</div>
+</div>
+</div></section>
+
+<section id="visit"><div class="wrap rv">
+<div class="eyebrow">Visit us</div>
+<h2>Come hungry.</h2>
+<div class="visit">
+<div class="vc"><div class="ic">📍</div><h3>Find us</h3><p>2532 W Colonial Dr<br>Orlando, FL 32804</p><br><a class="btn b2" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sunshine+Soulfood+Cafe+2532+W+Colonial+Dr+Orlando+FL+32804">Get directions</a></div>
+<div class="vc"><div class="ic">🕗</div><h3>Hours</h3><p>Opens 8 AM. Please call to confirm today's hours before you head over.</p></div>
+<div class="vc"><div class="ic">📞</div><h3>Contact</h3><p>+1 407-839-8999<br>Dine-in · Takeaway · Delivery</p><br><a class="btn b1" href="tel:+14078398999">Call now</a></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">☀️ Sunshine Soulfood Cafe · 2532 W Colonial Dr, Orlando, FL · +1 407-839-8999</div></footer>
+
+<div class="bar">
+<a class="btn b2" href="tel:+14078398999">📞 Call</a>
+<a class="btn b2" href="sms:+14078398999">💬 Message</a>
+<a class="btn b1" href="#order">🛒 Order</a>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script>
+var M={Popular:[["Kabrit Nan SOS","Haitian goat stew in rich sauce","🍲","g8",1],["Oxtails","Seasoned to the bone, fall-off-the-bone tender","🍖","g2",1],["Fried Chicken","Crispy, juicy, generously portioned","🍗","g1",1],["Collard Greens","Slow-cooked Southern greens","🥬","g6",1],["Cornbread","Warm, golden, buttery","🌽","g7",1]],
+Mains:[["Chicken & Waffles","Crispy chicken on fluffy waffles","🥞","g5"],["Rasta Pasta","Creamy Caribbean-style pasta","🍝","g4"],["Carolina Gold Wings","Tangy, sticky, addictive","🍗","g3"]],
+Sides:[["Makawoni O Graten","Haitian baked mac &amp; cheese","🧀","g3"],["Mac & Cheese","Creamy Southern classic","🧀","g7"],["Sweet Potato","Soft, sweet and comforting","🍠","g5"],["Plantains","Golden fried and caramelized","🍌","g1"],["Cabbage","Flavorful, tender, seasoned","🥬","g6"]],
+Sweets:[["Pancake","Fluffy, warm, made fresh","🥞","g7"]]};
+var cart=[],cur="Popular";
+var tabs=document.getElementById("tabs"),list=document.getElementById("menu-list");
+function tabsR(){tabs.innerHTML="";Object.keys(M).forEach(function(k){var b=document.createElement("button");b.className="tab"+(k==cur?" on":"");b.textContent=k;b.onclick=function(){cur=k;tabsR();listR()};tabs.appendChild(b)})}
+function listR(){list.innerHTML="";M[cur].forEach(function(d){var e=document.createElement("div");e.className="item";e.innerHTML='<div class="th '+d[3]+'">'+d[2]+'</div><div><h3>'+d[0]+(d[4]?'<span class="tag">POPULAR</span>':'')+'</h3><p>'+d[1]+'</p></div><button class="add" aria-label="Add '+d[0]+'">+</button>';e.querySelector(".add").onclick=function(){cart.push(d[0].replace("&amp;","&"));cartR()};list.appendChild(e)})}
+function cartR(){var c=document.getElementById("cart");c.innerHTML="";if(!cart.length){c.innerHTML='<span class="empty">Nothing yet — tap + on any dish.</span>'}
+cart.forEach(function(n,i){var s=document.createElement("span");s.className="chip";s.textContent=n+" ";var x=document.createElement("button");x.textContent="×";x.onclick=function(){cart.splice(i,1);cartR()};s.appendChild(x);c.appendChild(s)});upd()}
+function upd(){var n=document.getElementById("nm").value.trim()||"a guest";var t="Hi Sunshine Soulfood Cafe! Order for "+n+": "+(cart.length?cart.join(", "):"(I'll tell you what I want)")+". Is it for pickup, dine-in or delivery?";document.getElementById("send").href="sms:+14078398999"+(/iPhone|iPad|iPod/i.test(navigator.userAgent)?"&":"?")+"body="+encodeURIComponent(t)}
+document.getElementById("nm").oninput=upd;
+var r=document.documentElement,tg=document.getElementById("tg");
+function setT(t){r.setAttribute("data-theme",t);tg.textContent=t=="dark"?"☀️":"🌙"}
+setT(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+tg.onclick=function(){setT(r.getAttribute("data-theme")=="dark"?"light":"dark")};
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("in")})},{threshold:.1});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+
+var tt;function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("on")},4200)}
+function go(h){try{window.top.location.href=h}catch(x){try{window.location.href=h}catch(y){}}
+if(!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){toast(h.indexOf("tel:")==0?"📞 Call us at +1 407-839-8999":"💬 Text us at +1 407-839-8999")}}
+document.addEventListener("click",function(e){var a=e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href");
+if(h.charAt(0)=="#"){e.preventDefault();var t=h=="#top"?null:document.querySelector(h);window.scrollTo({top:t?t.getBoundingClientRect().top+window.scrollY-60:0,behavior:"smooth"});return}
+if(/^(tel|sms):/i.test(h)){e.preventDefault();go(h);return}
+if(/^https?:/i.test(h)){e.preventDefault();var w=null;try{w=window.open(h,"_blank")}catch(x){}
+if(w){try{w.opener=null}catch(x){}}else{try{window.top.location.href=h}catch(x){window.location.href=h}}}});
+tabsR();listR();cartR();
+</script>
+</body>
+</html>
